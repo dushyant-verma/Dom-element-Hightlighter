@@ -1,0 +1,29 @@
+document.addEventListener('mouseover', function (event) {
+
+
+    const target = event.target;
+
+
+    //  Remove highlight from previously highlighted element
+
+    const highlighted = document.querySelector('.highlight');
+    if (highlighted) {
+        highlighted.classList.remove('highlight');
+    }
+
+
+
+    //  Add highlight to the current element
+    target.classList.add('highlight');
+
+
+});
+
+document.addEventListener('mouseout', function (event) {
+
+    const target = event.target;
+    //  Remove highlight when the mouse leaves the element
+    target.classList.remove('highlight');
+
+
+});
